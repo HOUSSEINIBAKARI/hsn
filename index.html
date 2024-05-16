@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous"/>
+   <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100hv;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgb(100, 200, 100);
+    margin: 50px;
+}
+a  {
+  text-decoration: none;
+  color: green;
+  font-family: 'Times New Roman';
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.container .left_side{
+ position: relative;
+ background: #003147;
+ padding: 40px ;
+}
+.profile_text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+img{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+    border : solid white 2px ;
+}
+.profile_text  h2 {
+   color: #fff;
+   font-size: 1.2em;
+   margin-top: 20px;
+   text-transform: uppercase;
+   text-align: center;
+   font-weight: 700 ;
+   line-height: 1.4em;
+}
+span {
+ font-size: 1.0em;
+ font-weight: 250;
+ text-decoration: none;
+ font-style: italic;
+ font-family: cursive;
+ color: yellow;
+
+}
+.container .right_side{
+    position: relative;
+    background: #fff;
+    padding: 40px ;
+   }
+.contactinfo{
+    padding: 8px;
+}
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+.contactinfo ul{
+    position: relative;
+}
+.contactinfo ul li{
+    list-style: none;
+    position: relative;
+    margin: 5px 0;
+    cursor:pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 1.2em;
+
+}
+.contactinfo ul li .icon{
+    display: inline-block;
+    width: 20px;
+    font-size: 15px;
+    color: white;
+    
+}
+ /* Animation de la partie gauche*/
+ /*.title_profile{
+    color:black;
+    text-decoration: underline;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 5px;
+
+ }*/
+ .parcours{
+    margin-bottom: 5px;
+ }
+ .parcours:last-child{
+    margin-bottom: 0;
+ }
+ /* Animation des titres gauche */
+ .title1{
+    color:#003147;
+    padding-bottom: 10px;
+    text-decoration: underline;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+ /* mise en de texte profile*/
+ p{
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 1.1em;
+ }
+
+ table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: cursive;
+  }
+  
+  th, td {
+    border: 3px solid black;
+    padding: 3px;
+  }
+  
+  th {
+    text-align: center;
+  }
+  
+
+@keyframes citations {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    transform: translateX(2);
+  }
+}
+  
+  #citations {
+  width: 100%;
+  display: none;
+  animation: citations 1s forwards;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#citations p {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+  
+  /* media query*/
+ 
+ 
+  @media (max-width:500px ){
+    .container{
+        margin: 5px;
+        grid-template-columns: repeat(1,2fr);
+    }
+    .container .left_side{
+        position: relative;
+        background: black;
+        padding: 20px ;
+       }
+       img{
+        height: 130px;
+        width: 130px;
+        border-radius: 100%;
+        object-fit: cover;
+        border : solid white 2px ;
+    }
+    .profile_text{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+    .contactinfo ul li a{
+    list-style: none;
+    position: relative;
+    margin: 5px 0;
+    cursor:pointer;
+    font-family: 'Times New Roman';
+    font-style: italic;
+    font-size: 1.2em;
+
+}
+span a {
+ font-size: 0.95em;
+ font-weight: 250;
+ text-decoration: none;
+ font-style: italic;
+ font-family: 'Times New Roman', Times, serif;
+ color:white;
+ text-decoration: none;
+
+}
+ul li a href {
+  text-decoration: none;
+  color: white;
+  font-family: 'Times New Roman';
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+  }
+
+  @media (min-width:500px) and (max-width: 1000px ){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,2fr,3fr);
+    }
+  }
+  
+ul li a href {
+  text-decoration: none;
+  color: green;
+  font-family: 'Times New Roman';
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+
+.messages {
+    margin-bottom: 2px;
+}
+
+.input-container {
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color:blue;
+    color: white;
+    border-radius: 5px;
+}
+  
+
+   </style>
+</head>
+<body>
+    <div class="container">  
+        <div class="left_side">
+          <div class="profile_text">
+          <div class="profile_img">
+            <img id="pht" src="https://z-p3-scontent.fgou1-1.fna.fbcdn.net/v/t39.30808-1/258756389_930311744583247_1318229140884188627_n.jpg?stp=c0.13.200.200a_dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGvTpy24DNL714AamRDQzgMMqDXBVwW0bwyoNcFXBbRvIiOR1kDmKl0a7rkiPu6ekkqiVyaowKGNaf09-k2Y0dy&_nc_ohc=n441dyAloJoQ7kNvgEXmLRF&_nc_oc=Adg5nPBvtrpcR6EHussc3IMZVFiKtnwz01y03hJD_GaeDuaaS9OU9NJk97geqNgrZfQ&_nc_ht=z-p3-scontent.fgou1-1.fna&oh=00_AYChfiqDCFruoyGs_pl4zrmXKI0jWpdwxDMakbOyiR0H7Q&oe=664AA258" alt="Ma photo de profile">
+
+          </div>
+         <h2>HOUSSEINI BAKARI </h2><br> <span>Etudiant en 3eme année Informatique</span>
+            
+          </div>
+          <div class="contactinfo">
+              <h3 class="title"> Contacts</h3>
+              <ul>
+                <li>
+                    <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <span class="text">+237690220083</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                    <span class="text"><a href="mailto:housseinibakari06@gmail.com">housseinibakari06@gmail.com</a></span>
+                    
+
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <span class="text"> <a href="https://www.google.com/maps/place/Ngaound%C3%A9r%C3%A9/@7.3262527,13.575907,13z/data=!3m1!4b1!4m6!3m5!1s0x10efe2254719ac6b:0xa907c3abd1a34b31!8m2!3d7.3381488!4d13.5668302!16zL20vMDVyX2Jr?entry=ttu">Ngaoundere-Cameroun</a></span>
+                   
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                    <span class="text">Age   : 21 ans</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-facebook-square" aria-hidden="true"></i></span>
+                    <span class="text"><a href="https://web.facebook.com/me/">facebook</a></span>
+                    
+
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+                    <span class="text"> <a href="https://wa.me/<+237690220083>?text=<Bonjour Housseini>">Whatsapp</a></span>
+                   
+                    
+                </li>
+
+
+
+              </ul>
+          </div>
+          <div class="contactinfo">
+            <h2 class="title">ATOUTS</h2>
+            <ul>
+                <li>
+                    <span class="icon"></span>
+                    <span class="text">La communication efficace</span>
+                </li>
+                <li>
+                    <span class="icon"></span>
+                    <span class="text">Esprit colaboratif</span>
+                </li>
+                <li>
+                    <span class="icon"></span>
+                    <span class="text">Esprit de creativité</span>
+                </li>
+                <li>
+                    <span class="icon"></span>
+                    <span class="text"></span>
+                </li>
+            </ul>
+          </div>
+
+          <div class="contactinfo">
+            <h2 class="title">LOISIRS</h2>
+            <ul>
+                <li>
+                    <span class="icon"></span>
+                    <span class="text">La programmation</span>
+                </li>
+                <li>
+                    <span class="icon"></span>
+                    <span class="text">Le football</span>
+                </li>
+               
+                <li>
+                    <span class="icon"></span>
+                    <span class="text">les films et series </span>
+                </li>
+            </ul>
+          </div>
+          <div class="contactinfo">
+            <h2 class="title">LANGUE</h2>
+            <ul>
+                <li>
+                    <span class="icon"></span>
+                    <span class="text">Francais</span>
+                </li>
+                <li>
+                    <span class="icon"></span>
+                    <span class="text">Anglais niveau moyenne</span>
+                </li>
+               
+                <li>
+                    <span class="icon"></span>
+                    <span class="text">Fulfuldé </span>
+                </li>
+            </ul>
+          </div>
+         
+          <button onclick="afficherCitations()">Cliquez ici pour voir les citatations qui m'inspirent</button>
+
+          <div id="citations">
+            <p>"La vie est comme une bicyclette. Pour garder l’équilibre, vous devez continuer à avancer.” <em>Albert Einstein</em> 
+              </p>
+            <p>"De nos jours, même l'amitié se fait coter en bourse : la valeur d'un ami fluctue en fonction du temps, des circonstances et des intérêts."  
+              <em>Taha-Hassine FERHAT</em>
+              </p>
+            <p>“J’ai appris que le courage n’est pas l’absence de peur, mais le triomphe sur elle. L’homme courageux n’est pas celui qui ne ressent pas la peur, mais celui qui conquiert cette peur.” 
+             <em> Nelson Mandela</em> 
+             </p>
+          </div>
+        
+        
+        </div>
+        <div class="right_side">
+            <div class="parcours">
+              <div>
+                <h3 class="title1">Profile</h3>
+                <p>   Actullement je suis étudiant à l'université de Ngaoundere dans la faculté de sciences précisement 
+                  dans le departement Mathematiques et Informatiques je me permet donc à travers mon statut actuel 
+                  de me presenter comme 
+                  <strong>  Un develloppeur web & Administrateur des reseaux et systemes niveau moyenne</strong>
+                </p>
+              </div>
+                 <h2 class="title1">Mon parcours scolaire</h2>
+                 <table>
+                    <thead>
+                      <tr>
+                        <th>Diplomes</th>
+                        <th>Années</th>
+                        <th>Lieux</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>C.E.P</td>
+                        <td>2014</td>
+                        <td>ECOLE ANNEXE DE TIBATI</td>
+                      </tr>
+                      <tr>
+                        <td>B.E.P.C</td>
+                        <td>2018</td>
+                        <td>LYCEE CLASSIC DE NGAOUNDAL</td>
+                      </tr>
+                      <tr>
+                        <td>PROBATOIRE C</td>
+                        <td>2020</td>
+                        <td>LYCEE BILINGUE DE NGAOUNDAL</td>
+                      </tr>
+                      <tr>
+                        <td>BACCALAUREAT C</td>
+                        <td>2021</td>
+                        <td>LYCEE BILINGUE DE NGAOUNDAL</td>
+                      </tr>
+                      <tr>
+                        <td>LICENCE en INFOS</td>
+                        <td>En cours de telechargement</td>
+                        <td>UNIVERSITE DE NGAOUNDERE</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+            </div>
+           
+            <div class="contactinfo">
+              <h2 class="title1">MES COMPETENCES</h2>
+              <h2 class="title1">Competences maitrisées</h2>
+              <h3>Developpement web</h3>
+              <ul>
+                <li>HTML , XML et CSS</li>
+                <li>JavScript</li>
+                <li>Php procédurale</li>
+                <li>XAMP : Logiciel de gestion de base de données</li>
+              </ul>
+
+              <h2 class="title1">Competences en voie d'amelioration</h2>
+              <h3>Programmations</h3>
+              <ul>
+                <li>Programmation orientée objet (Java ,Php ,Phython)</li>
+                <li>Les technologies tels que : Boostrap , Node js ,React Js ...</li>
+               
+              </ul>
+              <h3>Administration réseaux et systèmes</h3>
+              <ul>
+                <li>Administration configuration des serveurs (DHCP,SSH...)</li>
+                <li>La connaissance dans le domaine de Cyber sécurité</li>
+               
+              </ul>
+              <h3>Infographie</h3>
+              <ul>
+                <li>les montages d'images / videos à travers les logicels  :  <br>Adobe photoshop  , Adobe Illustrator</li>
+              
+               
+              </ul>
+              <h2 class="title1">Projets réalisés</h2>
+              <ul>
+                <li>Plate form de cours réalisé en groupe et Supervisé par <strong>Dr Mballa Remy</strong></li>
+                <li>Conception d'un site web dynamique pour L2 Maths-info Supervisé par <strong>
+                  Dr Adamou Yougouda</strong></li>
+                <li>La conception d'une application android pour le site touristique du Cameroun  Supervisé par <strong>Dr Mballa Remy</strong></li>
+              </ul>
+            </div>
+      
+  </div>
+
+
+    </div>
+    <script>
+      const profilePic = document.getElementById('pht');
+  
+      profilePic.addEventListener('mouseover', () => {
+          profilePic.style.transform = 'scale(1.3)';
+      });
+  
+      profilePic.addEventListener('mouseout', () => {
+          profilePic.style.transform = 'scale(1)';
+      });
+
+function afficherCitations() {
+  document.getElementById("citations").style.display = "block";
+}
+
+  </script>
+  
+  
+</body>
+</html>
